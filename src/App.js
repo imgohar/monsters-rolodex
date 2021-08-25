@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 import CardList from "./components/CardList/CardList";
 import SearchBox from "./components/SearchBox/SearchBox";
 function App() {
-    const [monsters, changeMonsters] = useState([
-        { name: "Frank", id: 1 },
-        { name: "Dracula", id: 2 },
-        { name: "Voldemort", id: 3 },
-    ]);
+    const [monsters, changeMonsters] = useState([]);
 
     const [search, changeSearch] = useState("", () => console.log(search));
 
@@ -28,6 +24,7 @@ function App() {
     );
     return (
         <div className="App">
+            <h1>Monsters Rolodex</h1>
             <SearchBox
                 placeholder="Search Monsters"
                 handleChange={(e) => changeSearch(e.target.value)}
